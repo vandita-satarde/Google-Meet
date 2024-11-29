@@ -15,23 +15,25 @@
 }
 
 .image{
-    border: 1px solid rgb(186, 209, 238);
+    border: 1px solid rgb(125, 168, 220);
     width: 300px;
     height: 200px;
     margin: 20px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: rgb(13, 90, 197);
+    font-size: 20px;
+    font-weight: bold;
 }
+
+
 
 .image:hover{
     border: none;
     box-shadow: 0 0 10px 1px rgb(91, 151, 223);
 }
 
-.video-img{
-    width: 120px;
-}
 
 .icon-container{
     width: 1000px;
@@ -59,23 +61,22 @@ input{
     margin: 10px;
     width: 350px;
     border: none;
-    box-shadow: 0 0 2px 1px rgb(95, 93, 93);
+    box-shadow: 0 0 2px 1px rgb(93, 151, 216);
     border-radius: 2px;
 }
 
 input:hover{
-    box-shadow: 0 0 5px 1px rgb(105, 101, 101);
+    box-shadow: 0 0 5px 1px rgb(95, 141, 206);
 }
 
 .name{
-    border: 1px solid black;
+    border: 1px solid rgb(13, 90, 197);;
     padding: 10px;
+    margin: 10px 0;
     display: flex;
-    align-items: center;
-
-}
-
-.name-img{
-    width: 20px;
-    padding: 10px;
+    flex-direction: column;
+    padding-left: 20px;
+    width: 369px;
+    height: 20px;
+    color: rgb(15, 67, 140);
 }

@@ -9,22 +9,22 @@
     <div class="main-container">
         <div class="video-container border">
             <div class="image">
-                <img src="./images/letter-v.png" class="video-img"/>
+                Vandita
             </div>
             <div class="image">
-                <img src="./images/letter-a.png" class="video-img"/>
+                Alaric
             </div>
             <div class="image">
-                <img src="./images/letter-d.png" class="video-img"/>
+                Damon
             </div>
             <div class="image">
-                <img src="./images/letter-s.png" class="video-img"/>
+                Stefan
             </div>
             <div class="image">
-                <img src="./images/letter-e.png" class="video-img"/>
+                Elena
             </div>
             <div class="image">
-                <img src="./images/letter-m.png" class="video-img"/>
+                Matt
             </div>
             <div class="icon-container">
                 <img src="./images/mic.png" class="icon"/>
@@ -35,32 +35,50 @@
         
     
         <div class="name-container border" >
-            <input type="text" placeholder="Search" />
-            <div class="name">
-                <img src="./images/letter-v.png" class="name-img"/>
-                Vandita
-            </div>
-            <div class="name">
-                <img src="./images/letter-a.png" class="name-img"/>
-                Alaric
-            </div>
-            <div class="name">
-                <img src="./images/letter-d.png" class="name-img"/>
-                Damon
-            </div>
-            <div class="name">
-                <img src="./images/letter-s.png" class="name-img"/>
-                Stefan
-            </div>
-            <div class="name">
-                <img src="./images/letter-e.png" class="name-img"/>
-                Elena
-            </div>
-            <div class="name">
-                <img src="./images/letter-m.png" class="name-img"/>
-                Matt
-            </div>
+            <input type="text" placeholder="Search" id="search" onkeyup="Search()"/>
+            <div id="name"></div>
         </div>
     </div>
+
+    <script>
+        const students = [
+            "Vandita",
+            "Alaric",
+            "Damon",
+            "Stefan",
+            "Elena",
+            "Matt"
+        ]
+
+        const studentsName = document.getElementById('name');
+
+        students.forEach((stud)=>{
+            studentsName.innerHTML += `<div class='name'>${stud}</div>`
+        })
+
+        function processStudents(studentList){
+            studentsName.innerHTML = '';
+
+            studentList.forEach((stud)=>{
+                studentsName.innerHTML += `<div class='name'>${stud}</div>`
+            })
+        }
+
+        processStudents(students);
+
+        function Search(){
+            const input = document.getElementById('search');
+            const searchedText = input.value.toLowerCase();
+
+            const filteredStudents = students.filter((stud)=>{
+                if(stud.toLowerCase().includes(searchedText)){   
+                    return true;
+                }
+            })
+
+            processStudents(filteredStudents);
+        }
+
+    </script>
 </body>
 </html>
